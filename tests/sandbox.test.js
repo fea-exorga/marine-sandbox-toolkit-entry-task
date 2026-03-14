@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { createAsset } from '../lib/sandbox.js'
 import { placeAsset } from '../lib/sandbox.js'
+import { removeAsset } from '../lib/sandbox.js'
 
 describe('createAsset', () => {
   it('returns asset with correct fields', () => {
@@ -28,5 +29,30 @@ describe('placeAsset', () => {
     const asset = createAsset('a1', 'shark', '🦈', 100, 100)
     placeAsset(state, asset)
     expect(state.assets_placed).toHaveLength(0)
+  })
+})
+
+describe('removeAsset', () => {
+  it('removes asset by id', () => {
+    const state = { assets_placed: [createAsset('a1', 'shark', '🦈', 0, 0)] }
+    const next  = removeAsset(state, 'a1')
+    expect(next.assets_placed).toHaveLength(0)
+  })
+
+  it('leaves other assets intact', () => {
+    const state = {
+      assets_placed: [
+        createAsset('a1', 'shark', '🦈', 0, 0),
+        createAsset('a2', 'coral', '🪸', 50, 50)
+      ]
+    }
+    const next = removeAsset(state, 'a1')
+    expect(next.assets_placed[0].id).toBe('a2')
+  })
+
+  it('does not mutate original state', () => {
+    const state = { assets_placed: [createAsset('a1', 'shark', '🦈', 0, 0)] }
+    removeAsset(state, 'a1')
+    expect(state.assets_placed).toHaveLength(1)
   })
 })

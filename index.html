@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine AR Sandbox</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>Marine AR Sandbox</h1>
+    <button id="count-btn">Assets Placed: 0</button>
+    <button onclick="exportJSON()">Export JSON</button>
+</header>
+
+<div class="tool_area">
+    <aside>
+        <h2>Assets</h2>
+        <button class="asset-btn" data-type="clownfish" data-emoji="🐠" draggable="true">🐠 <span>Clownfish</span></button>
+        <button class="asset-btn" data-type="shark"     data-emoji="🦈" draggable="true">🦈 <span>Shark</span></button>
+        <button class="asset-btn" data-type="dolphin"   data-emoji="🐬" draggable="true">🐬 <span>Dolphin</span></button>
+        <button class="asset-btn" data-type="octopus"   data-emoji="🐙" draggable="true">🐙 <span>Octopus</span></button>
+        <button class="asset-btn" data-type="turtle"    data-emoji="🐢" draggable="true">🐢 <span>Turtle</span></button>
+        <button class="asset-btn" data-type="whale"     data-emoji="🐳" draggable="true">🐳 <span>Whale</span></button>
+        <button class="asset-btn" data-type="crab"      data-emoji="🦀" draggable="true">🦀 <span>Crab</span></button>
+        <button class="asset-btn" data-type="coral"     data-emoji="🪸" draggable="true">🪸 <span>Coral</span></button>
+        <button class="asset-btn" data-type="shell"     data-emoji="🐚" draggable="true">🐚 <span>Shell</span></button>
+        <button class="asset-btn" data-type="seaweed"   data-emoji="🌿" draggable="true">🌿 <span>Seaweed</span></button>
+    </aside>
+
+    <div id="canvas">
+        <div class="hint" id="hint">
+            <div style="font-size:40px; opacity:0.2">🐠</div>
+            <p>Click an asset to place it<br>or drag it onto the canvas</p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

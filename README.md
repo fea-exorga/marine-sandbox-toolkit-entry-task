@@ -2,16 +2,17 @@
 A browser-based sandbox for placing marine assets on a canvas and exporting their positions as JSON.
 
 ## Screenshot
-screenshot.png
+**screenshot.png**
 
 ## How to run
 No installation needed. Open the live demo directly in any modern browser:
 https://fea-exorga.github.io/marine-sandbox-toolkit-entry-task/
-
+```
 Or clone and open locally:
 git clone https://github.com/fea-exorga/marine-sandbox-toolkit-entry-task.git
 cd marine-sandbox-toolkit-entry-task
 open index.html
+```
 
 ## Live Demo
 Try it here: https://fea-exorga.github.io/marine-sandbox-toolkit-entry-task/

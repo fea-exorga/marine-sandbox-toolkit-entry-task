@@ -57,8 +57,10 @@ npm test
 ```
 
 ## Technologies
+```
 Language: Vanilla JavaScript (ES Modules)
 Testing: Vitest
 Styling: CSS3
 Environment: Node.js & NPM
 CI/CD: GitHub Actions
+```

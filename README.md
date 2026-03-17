@@ -34,6 +34,7 @@ npm install
 npm test
 
 ## JSON output
+```
 {
   "version": "1.0",
   "exported": "2026-03-15T10:00:00.000Z",
@@ -42,14 +43,17 @@ npm test
     { "id": "a1", "type": "shark", "emoji": "🦈", "x": 120, "y": 80 }
   ]
 }
+```
 
 ## File structure
+```
 ├── index.html
 ├── style.css
 ├── script.js
 ├── lib/sandbox.js       — pure logic (tested)
 ├── tests/sandbox.test.js
 └── README.md
+```
 
 ## Technologies
 Language: Vanilla JavaScript (ES Modules)
